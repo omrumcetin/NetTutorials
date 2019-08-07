@@ -10,15 +10,22 @@ namespace WCFServiceHost
         static void Main(string[] args)
         {
             //Create a URI to serve as the base address 8090
-            Uri httpUrl = new Uri("http://localhost:9971/abcservice");
+            Uri httpUrl = new Uri("http://localhost:10005/wcfservice");
 
             //Create ServiceHost
             ServiceHost host = new ServiceHost(typeof(StandaloneWCF.StandaloneWCF), httpUrl);
 
+
+            host.AddServiceEndpoint(typeof(StandaloneWCF.IStandaloneWCF), new WSHttpBinding(), "");
+
+            ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+            smb.HttpGetEnabled = true;
+            host.Description.Behaviors.Add(smb);
             //Add a service endpoint
-            var tcpBinding = new NetTcpBinding("OSSServiceTcpBinding");
-           
-            host.AddServiceEndpoint(typeof(IStandaloneWCF), new NetTcpBinding("OSSServiceTcpBinding"), "net.tcp://localhost:9970/abcservice");
+            //var tcpBinding = new NetTcpBinding("OSSServiceTcpBinding");           
+            //host.AddServiceEndpoint(typeof(IStandaloneWCF), new NetTcpBinding("OSSServiceTcpBinding"), "net.tcp://localhost:9970/wcfservice");
+            //var bindingWeb = new WebHttpBinding("OSSServiceBinding");
+            //host.AddServiceEndpoint(typeof(IStandaloneWCF), new WebHttpBinding("OSSServiceTcpBinding"), "http://localhost:9972/wcfservice");
 
             //var bindingWeb = new WebHttpBinding(WebHttpSecurityMode.None);
             //var baseAddress = host.Description.Endpoints[0].Address.Uri.AbsoluteUri;

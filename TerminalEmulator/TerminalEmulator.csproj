@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CEA24AE-0EF2-43A2-9698-6A88C26D4C02}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TerminalEmulator</RootNamespace>
+    <AssemblyName>TerminalEmulator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Rebex.Common, Version=2.5.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Ews, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Ews.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.FileServer, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.FileServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.FileSystem, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.FileTransfer, Version=4.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.FileTransfer.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Ftp, Version=4.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Http, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Imap, Version=2.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Imap.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Mail, Version=2.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Networking, Version=3.5.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Pop3, Version=2.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Pop3.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Security, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Sftp, Version=3.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Sftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Smtp, Version=2.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Smtp.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.SshShell, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.SshShell.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Telnet, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Telnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Terminal, Version=1.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Terminal.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Time, Version=3.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Time.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Zip, Version=2.0.6930.0, Culture=neutral, PublicKeyToken=1c4638788972655d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rebex.Net.4.0.6930\lib\Rebex.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
